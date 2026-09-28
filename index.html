@@ -1,11 +1,5 @@
-<!doctype html>
-<html lang="ru">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Никита Синопальников</title>
-<meta name="description" content="Портфолио вайбкодера Никиты Синопальникова">
-<link rel="icon" href="icoimg.ico">
+<meta name="description" content="Портфолио вайбкодера Никиты Синопальникова: сервисы отчётности, Telegram Mini App и лендинги, собранные с помощью ИИ.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700&family=Golos+Text:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
@@ -252,9 +246,9 @@ button{font:inherit;color:inherit}
 .spill span{color:#ef4444;transition:color .3s}
 .m-ads.a-f1 .spill span:nth-child(1),.m-ads.a-f2 .spill span:nth-child(2),.m-ads.a-f3 .spill span:nth-child(3){color:#22c55e}
 .hr{height:1px;background:#243044;margin:4px 0 8px}
-.ads-t{width:100%;border-collapse:collapse}
-.ads-t th{font-size:10.5px;color:#9ca3af;text-align:left;padding:6px 4px;border-bottom:1px solid #243044;font-weight:500}
-.ads-t td{padding:7px 4px;border-bottom:1px solid rgba(36,48,68,.7);vertical-align:middle;opacity:0;transition:opacity .4s}
+.ads-t{width:100%;table-layout:fixed;border-collapse:collapse}
+.ads-t th{font-size:10.5px;color:#9ca3af;text-align:left;padding:6px 4px;border-bottom:1px solid #243044;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ads-t td{padding:7px 4px;border-bottom:1px solid rgba(36,48,68,.7);vertical-align:middle;opacity:0;transition:opacity .4s;overflow-wrap:anywhere;word-break:break-word}
 .m-ads.a-table .ads-t td{opacity:1}
 .m-ads.a-table .ads-t tr:nth-child(2) td{transition-delay:.12s}.m-ads.a-table .ads-t tr:nth-child(3) td{transition-delay:.24s}.m-ads.a-table .ads-t tr:nth-child(4) td{transition-delay:.36s}
 .cb{width:16px;height:16px;border-radius:4px;background:#2563eb;display:grid;place-items:center;font-size:10px;color:#fff;transition:background .2s}
@@ -377,7 +371,7 @@ body.r-open .track,body.r-open .bar{visibility:hidden}
 
 /* ---------- MOBILE ---------- */
 @media (max-width: 860px){
-  html,body{height:auto}
+  html,body{height:auto;overflow-x:hidden;max-width:100%}
   .track{display:block;height:auto;overflow:visible}
   .bar{display:none}
   .panel{height:auto;padding:0}
@@ -404,7 +398,9 @@ body.r-open .track,body.r-open .bar{visibility:hidden}
   .proj-foot .tip{display:none}
   .flip-btn{display:flex;justify-content:center;align-items:center;gap:8px;height:48px;border-radius:14px;border:1px solid var(--ink);background:transparent;color:var(--ink);font-weight:600;cursor:pointer}
   .proj.open .flip-btn{background:var(--ink);color:var(--bg)}
-  .details{position:static;width:auto;opacity:1;transform:none;pointer-events:auto;display:none;border:1px solid var(--line);border-radius:18px;background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none;padding:20px 18px;font-size:15px}
+  .details{position:static;width:auto;opacity:1;transform:none;pointer-events:auto;display:none;border:1px solid var(--line);border-radius:18px;background:var(--surface);backdrop-filter:none;-webkit-backdrop-filter:none;padding:20px 18px;font-size:15px;gap:18px}
+  .details ul{gap:10px}
+  .details .result{margin-top:8px}
   .stage-wrap:hover .details,.stage-wrap:focus-within .details{transform:none}
   .proj.open .details{display:flex}
   .details .close{display:none}
@@ -506,23 +502,18 @@ body.editing .r-open .ed-bar{}
   .job ul{gap:3px}
   .r-sec > h2{break-after:avoid}
 }
-  .details .result{background:rgba(34,179,94,.16);color:#22B35E;border:1px solid rgba(34,179,94,.35)}
-  .details .result span{color:#22B35E;opacity:.8}
 </style>
-</head>
-<body>
-
 
 <div class="track" id="track">
 
   <!-- HERO -->
-  <section class="panel hero" id="p-home" data-nav="Обо мне">
+  <section class="panel hero" id="p-home" data-nav="Главная">
     <div class="hero-text">
       <span class="eyebrow">Портфолио · 2026</span>
       <h1 class="name"><span>Никита</span><span>Синопальников</span></h1>
       <div class="role">
         <b>Вайбкодер</b>
-        <p>Собираю решения против рабочей рутины с помощью нейросетей</p>
+        <p>Собираю ИИ-решения против рабочей рутины</p>
       </div>
       <div class="contacts">
         <div class="contact"><span class="label">Telegram</span><span><a href="https://t.me/nikitasinopalnikov" target="_blank" rel="noopener">@nikitasinopalnikov</a></span></div>
@@ -543,7 +534,7 @@ body.editing .r-open .ed-bar{}
 
   <div class="deck" id="deck" style="--n:3">
    <div class="deck-sticky">
-    <div class="deck-meta"><span>Кейсы</span><span id="deck-count">1 / 4</span></div>
+    <div class="deck-meta"><span>Кейсы</span><span id="deck-count">1 / 3</span></div>
     <div class="deck-cards" id="deck-cards">
 
     <!-- 1. Digital report -->
@@ -552,14 +543,14 @@ body.editing .r-open .ed-bar{}
         <div>
           <div class="idx">01 / 03</div>
           <h2>Digital-отчёт</h2>
-          <p>Сервис создания и облачного хранения интерактивных отчётов</p>
+          <p>PDF-отчёты по ВК Рекламе в пару кликов</p>
         </div>
       </div>
       <div class="stage-wrap" tabindex="0" aria-label="Digital-отчёт: подробности проекта">
         <div class="window">
           <div class="chrome"><span class="dots"><i></i><i></i><i></i></span><span class="url">vk-digital-report · Yandex Cloud</span></div>
           <div class="viewport"><div class="stage m-dr" data-scene="dr">
-            <div class="dr-top"><b></b><span></span><nav><i>Релизы</i><i class="t-ed on">Конструктор</i><i>История</i><i class="t-rep">Отчёт</i></nav></div>
+            <div class="dr-top"><b>VK DIGITAL-ОТЧЁТ</b><span>Yandex Cloud</span><nav><i>Релизы</i><i class="t-ed on">Конструктор</i><i>История</i><i class="t-rep">Отчёт</i></nav></div>
             <div class="dr-editor">
               <ol class="dr-steps"><li data-k="1">Релиз</li><li data-k="2">Обложка</li><li data-k="3">Стримы VK</li><li data-k="4">Сообщества</li><li data-k="5">Отчёт</li></ol>
               <div class="dr-cards">
@@ -604,35 +595,35 @@ body.editing .r-open .ed-bar{}
         </div>
         <div class="details">
           <h3>Было</h3>
-          <p>Отчёты по итогам рекламных кампаний собирали вручную, долго и с ошибками.</p>
+          <p>Отчёты по релизам собирали руками. Долго и каждый раз по-разному.</p>
           <h3>Стало</h3>
-          <ul><li>Интерактивный конструктор с интуитивным интерфейсом</li><li>Минимизация ошибок из-за человеческого фактора</li><li>Облачное хранение и корпоративный доступ</li></ul>
-          <div class="result"><span>Итог</span>Решениеэкономит менеджерам до 20 рабочих часов в месяц</div>
+          <ul><li>Конструктор в 5 шагов: обложка, стримы из Excel, сообщества</li><li>PDF в один клик и архив в Yandex Cloud</li><li>Любой бренд компании на выбор</li></ul>
+          <div class="result"><span>Итог</span>−27 часов рутины в месяц</div>
           <div class="d-actions"></div>
           <button class="close" type="button">Назад</button>
         </div>
       </div>
       <div class="proj-foot">
         <span class="tag">Yandex Cloud</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
-        <span class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 11V5a2 2 0 1 1 4 0v5m0-1a2 2 0 1 1 4 0v2m0-1a2 2 0 1 1 4 0v4a7 7 0 0 1-7 7h-1a7 7 0 0 1-6-3.4L4.5 14a2 2 0 0 1 3.3-2.2L9 13"/></svg>Наведите курсор на окно</span>
+        <span class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 11V5a2 2 0 1 1 4 0v5m0-1a2 2 0 1 1 4 0v2m0-1a2 2 0 1 1 4 0v4a7 7 0 0 1-7 7h-1a7 7 0 0 1-6-3.4L4.5 14a2 2 0 0 1 3.3-2.2L9 13"/></svg>Наведи на окно</span>
       </div>
       <button class="flip-btn" type="button">Было → стало</button>
     </section>
 
     <!-- 3. VK Ads -->
-    <section class="panel proj" id="p-ads" data-nav="Report Builder">
+    <section class="panel proj" id="p-ads" data-nav="VK Ads">
       <div class="proj-head">
         <div>
           <div class="idx">02 / 03</div>
           <h2>VK Ads Report Builder</h2>
-          <p>Скрипт для создания экспресс-отчётов в ходе рекламных кампаний</p>
+          <p>Экспресс-отчёт по ВК Рекламе из трёх выгрузок</p>
         </div>
       </div>
       <div class="stage-wrap" tabindex="0" aria-label="VK Ads Report Builder: подробности проекта">
         <div class="window">
           <div class="chrome"><span class="dots"><i></i><i></i><i></i></span><span class="url">vk-ads-report-builder.html</span></div>
           <div class="viewport"><div class="stage m-ads" data-scene="ads">
-            <h5></h5>
+            <h5>Сервис промежуточных отчётов по продвижению музыки в ВК Рекламе</h5>
             <div class="ads-grid">
               <div class="ads-card">
                 <div class="slots">
@@ -643,7 +634,7 @@ body.editing .r-open .ed-bar{}
                 <div class="spill"><span>Группы</span>·<span>Кампании</span>·<span>Софт</span></div>
                 <div class="hr"></div>
                 <table class="ads-t">
-                  <tr><th style="width:26px">✓</th><th>Кампания</th><th style="width:96px">Статус</th><th style="width:150px">Комментарий</th></tr>
+                  <tr><th style="width:10%">✓</th><th>Кампания</th><th style="width:24%">Статус</th><th style="width:30%">Комментарий</th></tr>
                   <tr><td><span class="cb"></span></td><td>Северный свет · слушатели 18–24</td><td class="ok">Идут показы</td><td><span class="cin" data-t="comment"></span></td></tr>
                   <tr><td><span class="cb"></span></td><td>Северный свет · похожие артисты</td><td class="ok">Идут показы</td><td><span class="cin"></span></td></tr>
                   <tr class="r3"><td><span class="cb"></span></td><td>Северный свет (скрытые)</td><td class="bad">Остановлена</td><td><span class="cin"></span></td></tr>
@@ -661,17 +652,16 @@ body.editing .r-open .ed-bar{}
         </div>
         <div class="details">
           <h3>Было</h3>
-          <p>Срез статистики вручную сводили из трёх Excel-файлов, допускали ошибки</p>
+          <p>Сводку для клиента вручную сводили из трёх Excel-файлов.</p>
           <h3>Стало</h3>
-          <ul><li>Скрипт агрегирует статистику рекламного кабинета</li><li>Человеческий фактор сведён к минимуму</li><li>Готовое сообщение копируется одной кнопкой</li></ul>
-          <div class="result"><span>Итог</span>Решениесводит к минимуму ошибки расчётов и экономит менеджерам до 10 рабочих часов в месяц</div>
+          <ul><li>Кидаешь три выгрузки, данные сопоставляются сами</li><li>Считает траты, прослушивания и цену добавления</li><li>Готовое сообщение копируется одной кнопкой</li></ul>
           <div class="d-actions"></div>
           <button class="close" type="button">Назад</button>
         </div>
       </div>
       <div class="proj-foot">
         <span class="tag">HTML</span><span class="tag">Excel-импорт</span>
-        <span class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 11V5a2 2 0 1 1 4 0v5m0-1a2 2 0 1 1 4 0v2m0-1a2 2 0 1 1 4 0v4a7 7 0 0 1-7 7h-1a7 7 0 0 1-6-3.4L4.5 14a2 2 0 0 1 3.3-2.2L9 13"/></svg>Наведите курсор на окно</span>
+        <span class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 11V5a2 2 0 1 1 4 0v5m0-1a2 2 0 1 1 4 0v2m0-1a2 2 0 1 1 4 0v4a7 7 0 0 1-7 7h-1a7 7 0 0 1-6-3.4L4.5 14a2 2 0 0 1 3.3-2.2L9 13"/></svg>Наведи на окно</span>
       </div>
       <button class="flip-btn" type="button">Было → стало</button>
     </section>
@@ -681,7 +671,7 @@ body.editing .r-open .ed-bar{}
         <div>
           <div class="idx">03 / 03</div>
           <h2>ChatBook</h2>
-          <p>Telegram-читалка для концентрации внимания</p>
+          <p>Книги в формате чата в Telegram</p>
         </div>
         <div class="proj-actions"><a class="btn accent" href="https://t.me/like_a_chat_bot" target="_blank" rel="noopener">Попробовать</a></div>
       </div>
@@ -693,10 +683,10 @@ body.editing .r-open .ed-bar{}
               <div class="ph-head"><span class="ava">МА</span><span><b>Марк Аврелий · Размышления</b><small><span class="st">Книга первая · 12%</span><span class="ty">печатает…</span></small></span></div>
               <div class="chat" data-t="chat"><span class="sys">Книга первая</span><div class="dots3"><i></i><i></i><i></i></div></div>
               <div class="ph-foot"><span>Дальше</span><i>›</i></div>
-              <div class="paywall"><b>Пробный фрагмент прочитан</b><p>Подписка открывает доступ ко всем функциям приложения без ограничений.</p><div class="pb" data-t="pay"><span class="buy">Оформить за <span class="star">★</span> Stars</span><span class="done">Подписка активна ✓</span></div></div>
+              <div class="paywall"><b>Пробный фрагмент прочитан</b><p>Подписка открывает всю библиотеку и Путь на Олимп без ограничений.</p><div class="pb" data-t="pay"><span class="buy">Оформить за <span class="star">★</span> Stars</span><span class="done">Подписка активна ✓</span></div></div>
             </div>
             <div class="olymp">
-              <div class="ol-top"><div><div class="ey">Путь на Олимп</div><h6>Читаешь — бог восходит на Олимп</h6></div><span class="rule">1 сообщение = 1 шаг</span></div>
+              <div class="ol-top"><div><div class="ey">Путь на Олимп</div><h6>Читаешь — Афина лезет к трону</h6></div><span class="rule">1 сообщение = 1 шаг</span></div>
               <div class="board" data-t="board">
                 <svg class="mount" viewBox="0 0 382 330" aria-hidden="true">
                   <defs><linearGradient id="mtg" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#E9DCD3"/><stop offset="1" stop-color="#F6F1EE"/></linearGradient></defs>
@@ -719,17 +709,16 @@ body.editing .r-open .ed-bar{}
         </div>
         <div class="details">
           <h3>Было</h3>
-          <p>Медленное чтение больших текстов из-за привычки читать короткие посты</p>
+          <p>Читать книги лень. Переписываться в чатах не лень.</p>
           <h3>Стало</h3>
-          <ul><li>ИИ делит оригинальный текст книги на короткие сообщения</li><li>Чтение становится более простым</li><li>Геймификация стимулирует регулярное чтение</li></ul>
-          <div class="result"><span>Итог</span>Приложение увеличивает продолжительность чтения минимум в 2 раза и улучшает усвоение материала благодаря порционной подаче информации</div>
+          <ul><li>Книга приходит сообщениями, как переписка</li><li>Игра «Путь на Олимп»: читаешь, и бог поднимается к трону</li><li>Подписка в Telegram Stars</li></ul>
           <div class="d-actions"><a class="btn accent" href="https://t.me/like_a_chat_bot" target="_blank" rel="noopener">Попробовать</a></div>
           <button class="close" type="button">Назад</button>
         </div>
       </div>
       <div class="proj-foot">
         <span class="tag">Telegram Mini App</span><span class="tag">Cloudflare</span><span class="tag">HTML</span>
-        <span class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 11V5a2 2 0 1 1 4 0v5m0-1a2 2 0 1 1 4 0v2m0-1a2 2 0 1 1 4 0v4a7 7 0 0 1-7 7h-1a7 7 0 0 1-6-3.4L4.5 14a2 2 0 0 1 3.3-2.2L9 13"/></svg>Наведите курсор на окно</span>
+        <span class="tip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 11V5a2 2 0 1 1 4 0v5m0-1a2 2 0 1 1 4 0v2m0-1a2 2 0 1 1 4 0v4a7 7 0 0 1-7 7h-1a7 7 0 0 1-6-3.4L4.5 14a2 2 0 0 1 3.3-2.2L9 13"/></svg>Наведи на окно</span>
       </div>
       <button class="flip-btn" type="button">Было → стало</button>
     </section>
@@ -744,7 +733,7 @@ body.editing .r-open .ed-bar{}
   <section class="panel outro" id="p-contacts" data-nav="Контакты">
     <span class="eyebrow">Контакты</span>
     <h2>Есть рутина?<br><em>Автоматизируем</em></h2>
-    <p class="lead">Напишите в Telegram или на почту, и мы обсудим вашу задачу</p>
+    <p class="lead">Пиши в Telegram или на почту.</p>
     <div class="contacts">
       <div class="contact"><span class="label">Telegram</span><span><a href="https://t.me/nikitasinopalnikov" target="_blank" rel="noopener">@nikitasinopalnikov</a></span></div>
       <div class="contact"><span class="label">Почта</span><span><a href="mailto:nikita-sinopalnikov@yandex.ru">nikita-sinopalnikov@yandex.ru</a><button class="copy" type="button" data-copy="nikita-sinopalnikov@yandex.ru">копировать</button></span></div>
@@ -759,7 +748,7 @@ body.editing .r-open .ed-bar{}
 <div class="bar" id="bar">
   <nav id="nav" aria-label="Разделы"></nav>
   <div class="progress"><i id="prog"></i></div>
-  <div class="hint"><span class="wheel"></span>Колесо мыши</div>
+  <div class="hint"><span class="wheel"></span>Крути колесо</div>
 </div>
 
 <!-- RESUME -->
@@ -779,7 +768,7 @@ body.editing .r-open .ed-bar{}
       <div>
         <h1>Никита Синопальников</h1>
         <div class="pos">Вайбкодер</div>
-        <p class="meta">28 лет · Тбилиси · удалённо · гражданство: РФ · самозанятый / договор ГПХ</p>
+        <p class="meta">28 лет · Тбилиси · удалённо · гражданство: РФ · ожидаемый доход: 50 000 ₽ за месяц, до вычета налогов</p>
         <div class="r-contacts">
           <a href="mailto:nikita-sinopalnikov@yandex.ru">nikita-sinopalnikov@yandex.ru</a>
           <a href="https://t.me/nikitasinopalnikov" target="_blank" rel="noopener">t.me/nikitasinopalnikov</a>
@@ -862,17 +851,7 @@ body.editing .r-open .ed-bar{}
     <section class="r-sec">
       <h2>Навыки</h2>
       <div class="skills">
-  <span>Вайбкод</span>
-  <span>ChatGPT</span>
-  <span>Claude</span>
-  <span>DeepSeek</span>
-  <span>Декомпозиция задач</span>
-  <span>Анализ бизнес-процессов</span>
-  <span>Разработка ИТ-решений</span>
-  <span>Автоматизация документооборота</span>
-  <span>Работа с API</span>
-  <span>Обработка данных</span>
-  <span>Визуализация данных</span>
+        <span>Вайбкод</span><span>ChatGPT</span><span>Claude</span><span>DeepSeek</span><span>Декомпозиция задач</span><span>Анализ бизнес-процессов</span><span>Разработка ИТ-решений</span><span>Автоматизация документооборота</span><span>Работа с API</span><span>Обработка данных</span><span>Визуализация данных</span>
       </div>
     </section>
 
@@ -1321,6 +1300,3 @@ body.editing .r-open .ed-bar{}
   })();
 })();
 </script>
-
-</body>
-</html>
